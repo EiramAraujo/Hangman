@@ -7,12 +7,12 @@ class Game {
   private var banco_letras:Array[Char] = new Array[Char](26)
   private var errores:Array[Char] = new Array[Char](7)
   private var aciertos:ArrayBuffer[Char] = new ArrayBuffer[Char]()
-  private var letra:Char = null
-  private var lenght:Byte = null
-  private var num_errores:Byte = null
-  private var suposicion:Boolean = null
+  private var letra:Char = '@'
+  private var lenght:Byte = 0
+  private var num_errores:Byte = 0
+  private var suposicion:Boolean = false
 
-  def startGame(){
+  def startGame() = {
 
   }
 
