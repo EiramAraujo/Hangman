@@ -1,5 +1,7 @@
 package Hangman
 
+import Pantalla.Mensajes
+
 import scala.collection.mutable.ArrayBuffer
 
 class Game {
@@ -11,6 +13,7 @@ class Game {
   private var lenght:Byte = 0
   private var num_errores:Byte = 0
   private var suposicion:Boolean = false
+  private var display:Mensajes = new Mensajes()
 
   def startGame() = {
 

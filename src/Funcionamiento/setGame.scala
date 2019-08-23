@@ -1,6 +1,6 @@
 package Funcionamiento
 
-trait setGame {
+class setGame {
 
   //Recibe la frase con la que se jugara
   def setFrase(): String ={

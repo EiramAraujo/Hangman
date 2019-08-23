@@ -1,7 +1,8 @@
 package Hangman
 
+import Pantalla.Mensajes
+
 object Ahorcado extends App {
-  /*var x = scala.io.StdIn.readLine()
-  println(x)*/
+
 
 }
