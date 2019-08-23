@@ -1,5 +1,7 @@
 package Funcionamiento
 
+import scala.collection.mutable.ArrayBuffer
+
 trait Logica {
 
   //Se recibe la letra y se validan diferentes parametros
@@ -7,7 +9,7 @@ trait Logica {
     var letra: Char = '@'
     do {
       print("Ingrese una letra disponible: ")
-      letra = scala.io.StdIn.readChar()
+      letra = scala.io.StdIn.readChar().toUpper
     }
     while({
       validarLetra(banco, letra)
@@ -31,7 +33,7 @@ trait Logica {
   //Se revisa si la suposicion del jugador es correcta
   def revisarSuposicion(letra:Char, frase:String, aciertos:Array[Char]): Boolean = {
     var suposicion: Boolean = true
-    for(i <- 0 to frase.length()){
+    for(i <- 0 until frase.length()){
       if( letra == frase.charAt(i)){
         suposicion = false
         aciertos(i) = letra
@@ -53,9 +55,9 @@ trait Logica {
   }
 
   //Se checa si se han adivinado todas las letras
-  def ganar(aciertos:Array[Char],lenght:Int): Boolean ={
-    for(i <- 0 to lenght){
-      if(aciertos(i).equals(' ')){
+  def ganar(aciertos:Array[Char], lenght:Int): Boolean ={
+    for(i <- 0 until lenght){
+      if(aciertos(i).equals('_')){
         return true
       }
     }

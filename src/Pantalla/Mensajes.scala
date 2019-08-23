@@ -1,6 +1,8 @@
 package Pantalla
 
-  class Mensajes {
+import scala.collection.mutable.ArrayBuffer
+
+class Mensajes {
 
     def displayErrores(errores: Array[Char]): Unit = {
       println("Fallas: ")
@@ -11,13 +13,13 @@ package Pantalla
     }
 
     def displayAciertos(n: Integer, aciertos: Array[Char]): Unit = {
-      for (i <- 0 to n) {
+      for (i <- 0 to n-1) {
         print(aciertos(i).toString() + ' ')
       }
     }
 
     def displayBanco(banco: Array[Char]): Unit = {
-      for (i <- 0 to 26) {
+      for (i <- 0 to 25) {
         print(banco(i).toString() + ' ')
         if (i == 12) {
           println(" ");
