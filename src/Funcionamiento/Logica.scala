@@ -21,7 +21,7 @@ trait Logica {
   //Valida que la letra este disponible en el banco de palabras
   def validarLetra(banco:Array[Char], letra:Char): Boolean ={
     for (i <- 0 to 25){
-      if (banco(i).==(letra)){
+      if (banco(i).==(letra) && letra.!=('#')){
         banco(i)= '#'
         return false
       }
